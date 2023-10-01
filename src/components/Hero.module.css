@@ -1,0 +1,68 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.boxMessage {
+    margin:auto;
+    text-align: justify;
+    padding-left: 10%;
+}
+
+.boxImg {
+    height:auto;
+    object-fit: contain ;
+    padding-left: 20%;
+}
+
+.Hero{
+    background-color:#495e57 ;
+}
+
+.header {
+    color:#F4CE14;
+    font-size: 50px;
+    font-family: 'Markazi Text' ;
+    margin-bottom: 0px;
+}
+
+.subheader {
+    color:#edefee;
+    font-family: 'Markazi Text' ;
+    font-size: 40px;
+    margin-top: 0px;
+}
+
+.p {
+    color:#edefee;
+    font-family: 'Markazi Text' ;
+    font-size: 22px;
+    white-space: pre;
+    text-decoration: solid;
+}
+
+.img {
+    border-radius: 30px;
+    max-height: 400px;
+    max-width: 300px;
+    padding-top: 2%;
+
+}
+
+.button {
+  background-color: #F4CE14;
+  color: black;
+  padding: 8px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 15px;
+  font-family: 'Markazi Text' ;
+  font-size: 22px;
+}
+
+.button:hover, .button:active {
+    background-color: #EE9972;
+  }

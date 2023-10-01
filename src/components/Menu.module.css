@@ -1,0 +1,12 @@
+.menu{
+background-color: #fbdabb ;
+}
+
+.img {
+    padding-top: 5%;
+    padding-bottom : 5%;
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    border-radius:30px;
+}

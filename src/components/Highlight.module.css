@@ -1,0 +1,115 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1%;
+}
+
+.header {
+    color:black;
+    font-size: 50px;
+    font-family: 'Markazi Text' ;
+    margin-bottom: 0px;
+    padding-left:10%;
+    margin:auto;
+    text-align: justify;
+    padding-left: 20%;
+    padding-top:2%;
+}
+
+.boxButton{
+    height:auto;
+    object-fit: contain ;
+    padding-left: 25%;
+    padding-top:2%;
+}
+
+.container2{
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-gap: 3%;
+    padding: left 10% right 10%;
+}
+
+.containerX{
+    display: grid;
+    grid-template-columns: 20% 60% 20% ;
+}
+
+.boxImg {
+    /* width: 50%;
+    padding: 10; */
+    background-color: #edefee;
+    align-items: center;
+    border-radius: 30px;
+    width: auto;
+}
+
+.boxSub {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    padding-left: 8%;
+    padding-right: 8%;
+    font-size: 16px;
+    font-family: 'Karla' ;
+}
+
+.boxSub_h4 {
+
+    font-size: 16px;
+    font-family: 'Karla' ;
+    color: #ee9972;
+}
+
+.Highlight{
+    background-color:white ;
+}
+
+.desc_p {
+    color:#495e57;
+    font-family: 'Karla' ;
+    font-size: 16px;
+    text-decoration: solid;
+    text-align: justify;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.desc_h4 {
+    color:black;
+    font-family: 'Karla' ;
+    font-size: 16px;
+    text-decoration: solid;
+    padding: 10%;
+    padding-left: 8%;
+    padding-right: 8%;
+
+}
+.desc_h4:hover{
+    color: #EE9972;
+  }
+
+.img {
+    border-radius: 30px;
+    /* Need to put width and height to 100% for object-fit to work! */
+    width:100%;
+    max-height:220px;
+    object-fit: cover ;
+}
+
+.button {
+  background-color: #F4CE14;
+  color: black;
+  padding: 8px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 15px;
+  font-family: 'Markazi Text' ;
+  font-size: 22px;
+}
+
+.button:hover, .button:active {
+    background-color: #EE9972;
+  }

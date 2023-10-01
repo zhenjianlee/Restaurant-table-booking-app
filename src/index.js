@@ -10,6 +10,13 @@ root.render(
     <App />
   </React.StrictMode>
 );
+<>
+<meta name="description" content="Little lemon restaurant website"/>
+<meta name="og:title" content="Little Lemon"/>
+<meta name="og:description" content="Little lemon restaurant website"/>
+<meta name="og:image" content=""/>
+</>
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
