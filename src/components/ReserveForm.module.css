@@ -1,0 +1,145 @@
+.container {
+    display: grid;
+    grid-template-columns: 20% 40% 20%;
+    grid-gap: 10%;
+    margin:auto;
+    padding: 2%;
+}
+
+.form{
+    display: grid;
+    grid-template-rows: repeat(10) ;
+    background-color:#FBDABB;
+    padding:10%;
+    margin: 5%;
+    border: solid #333333;
+    border-radius: 15px;
+}
+
+.header {
+    color:black;
+    font-size: 50px;
+    font-family: 'Markazi Text' ;
+    margin-bottom: 20%;
+    padding-left:10%;
+    margin:auto;
+    text-align: justify;
+    padding-left: 20%;
+    padding-top:1%;
+    margin:1%;
+}
+
+label{
+    color:black;
+    font-family: 'Karla' ;
+    font-size: 25px;
+    text-decoration: solid;
+    padding-bottom: 3%;
+    padding-top: 3%
+}
+
+input{
+    color:black;
+    font-family: 'Karla' ;
+    font-size: 25px;
+    text-decoration: solid;
+    border-radius: 8px;
+}
+
+select{
+    color:black;
+    font-family: 'Karla' ;
+    font-size: 25px;
+    text-decoration: solid;
+    border-radius: 8px;
+}
+
+button {
+    background-color: #F4CE14;
+    color: black;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+    font-family: 'Markazi Text' ;
+    font-size: 22px;
+    margin-top: 10%;
+
+  }
+
+button:hover, .button:active {
+      background-color: #EE9972;
+    }
+
+/*
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.boxMessage {
+    margin:auto;
+    text-align: justify;
+    padding-left: 10%;
+}
+
+.boxImg {
+    height:auto;
+    object-fit: contain ;
+    padding-left: 20%;
+}
+
+.Hero{
+    background-color:#495e57 ;
+}
+
+.header {
+    color:#F4CE14;
+    font-size: 50px;
+    font-family: 'Markazi Text' ;
+    margin-bottom: 0px;
+}
+
+.subheader {
+    color:#edefee;
+    font-family: 'Markazi Text' ;
+    font-size: 40px;
+    margin-top: 0px;
+}
+
+.p {
+    color:#edefee;
+    font-family: 'Markazi Text' ;
+    font-size: 22px;
+    white-space: pre;
+    text-decoration: solid;
+}
+
+.img {
+    border-radius: 30px;
+    max-height: 400px;
+    max-width: 300px;
+    padding-top: 2%;
+
+}
+
+.button {
+  background-color: #F4CE14;
+  color: black;
+  padding: 8px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 15px;
+  font-family: 'Markazi Text' ;
+  font-size: 22px;
+}
+
+.button:hover, .button:active {
+    background-color: #EE9972;
+  } */
