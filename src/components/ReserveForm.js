@@ -27,7 +27,9 @@ function ReserveForm( {form, onChange , occasions ,availableTimes ,handlerSubmit
                                 type ="text"
                                 value ={form.date}
                                 onChange={handlerChange}
-                                placeholder="YYYY-MM-DD"/>
+                                placeholder="YYYY-MM-DD"
+                                required
+                                minLength={10}/>
 
                     <label htmlFor="time">Reservation Time</label>
                         <select name ="time" id="time" value={form.time} onChange={handlerChange} onClick={fetchData}>
@@ -45,8 +47,10 @@ function ReserveForm( {form, onChange , occasions ,availableTimes ,handlerSubmit
                                 value ={form.guests}
                                 onChange={handlerChange}
                                 placeholder="2 pax?"
-                                min="0"
-                                max="10"/>
+                                min="1"
+                                max="10"
+                                required
+                                minLength={1}/>
 
                     <label htmlFor="occasion">Occasion</label>
                         <select name ="occasion" id="occasion" value={form.occasion} onChange={handlerChange}>
@@ -62,7 +66,9 @@ function ReserveForm( {form, onChange , occasions ,availableTimes ,handlerSubmit
                                 type ="text"
                                 value ={form.name}
                                 onChange={handlerChange}
-                                placeholder="Name"/>
+                                placeholder="Name"
+                                required
+                                minLength={5}/>
 
                     <label htmlFor="mobile">Mobile Number</label>
                         <input name="mobile"
@@ -70,15 +76,21 @@ function ReserveForm( {form, onChange , occasions ,availableTimes ,handlerSubmit
                                 type ="number"
                                 value ={form.mobile}
                                 onChange={handlerChange}
-                                placeholder="+65 6688 5665 "/>
+                                placeholder="+65 6688 5665 "
+                                required
+                                minLength={8}/>
 
                     <button onClick={handlerSubmit}
                                 disabled={form.date === "" ||
+                                            form.date.length< 10||
                                             form.guests === "" ||
+                                            form.guests <= 0 ||
                                             form.time === "" ||
                                             form.occasion ==="" ||
                                             form.name ==="" ||
-                                            form.mobile ===""}
+                                            form.name.length <=5 ||
+                                            form.mobile ===""||
+                                            form.mobile.length <=7}
                                 >Submit Reservation</button>
 
             </form>
