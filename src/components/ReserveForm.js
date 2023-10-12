@@ -1,9 +1,13 @@
 import styles from './ReserveForm.module.css'
 
-function ReserveForm( {form, onChange , occasions ,availableTimes ,handlerSubmit}) {
+function ReserveForm( {form, onChange , occasions ,availableTimes ,handlerSubmit,onClick}) {
 
     const handlerChange = (e) => {
         onChange(e)
+    }
+
+    const fetchData = (e)=> {
+        onClick(e)
     }
 
     return (
@@ -13,26 +17,30 @@ function ReserveForm( {form, onChange , occasions ,availableTimes ,handlerSubmit
 
         <div className={styles.container}>
 
-            <empty space left />
+            <div name="empty space" />
 
 
             <form className={styles.form} >
-                    <label>Date</label>
+                    <label htmlFor="date">Reservation Date (YYYY-MM-DD)</label>
                         <input name="date"
-                            type ="text"
-                            value ={form.date}
-                            onChange={handlerChange}
-                            placeholder="DD/MM/YY"/>
+                                id="date"
+                                type ="text"
+                                value ={form.date}
+                                onChange={handlerChange}
+                                placeholder="YYYY-MM-DD"/>
 
-                    <label>Reservation Time</label>
-                        <select name ="availableTimes" value={form.availableTimes} onChange={handlerChange}>
-                            {availableTimes.map( (item,index)=>
-                            (<option key={index} value={form.item}>{item}</option>)
-                            )}
+                    <label htmlFor="time">Reservation Time</label>
+                        <select name ="time" id="time" value={form.time} onChange={handlerChange} onClick={fetchData}>
+                            {availableTimes.length>0 && availableTimes[availableTimes.length-1] !== undefined?
+                                        availableTimes.map( (item,index)=>
+                                            (<option key={index} value={item}>{item}</option>)
+                                            ):null}
                         </select>
 
-                    <label>Number of Guests</label>
+
+                    <label htmlFor="guests">Guests</label>
                         <input name="guests"
+                                id="guests"
                                 type = "number"
                                 value ={form.guests}
                                 onChange={handlerChange}
@@ -40,19 +48,42 @@ function ReserveForm( {form, onChange , occasions ,availableTimes ,handlerSubmit
                                 min="0"
                                 max="10"/>
 
-                    <label>Occasion</label>
-                        <select name ="occasion" value={form.occasion} onChange={handlerChange}>
-                        {occasions.map((item,index)=>(
+                    <label htmlFor="occasion">Occasion</label>
+                        <select name ="occasion" id="occasion" value={form.occasion} onChange={handlerChange}>
+                        {occasions? occasions.map((item,index)=>(
                             <option key={index} value={item}>{item}</option>
                         )
-                        )}
+                        ):null}
                         </select>
 
-                    <button onClick={handlerSubmit}>Submit Reservation</button>
+                    <label htmlFor="name">Name</label>
+                        <input name="name"
+                                id="name"
+                                type ="text"
+                                value ={form.name}
+                                onChange={handlerChange}
+                                placeholder="Name"/>
+
+                    <label htmlFor="mobile">Mobile Number</label>
+                        <input name="mobile"
+                                id="mobile"
+                                type ="number"
+                                value ={form.mobile}
+                                onChange={handlerChange}
+                                placeholder="+65 6688 5665 "/>
+
+                    <button onClick={handlerSubmit}
+                                disabled={form.date === "" ||
+                                            form.guests === "" ||
+                                            form.time === "" ||
+                                            form.occasion ==="" ||
+                                            form.name ==="" ||
+                                            form.mobile ===""}
+                                >Submit Reservation</button>
 
             </form>
 
-            <empty space right />
+            <div name="empty space" />
         </div>
 
 

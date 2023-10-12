@@ -1,18 +1,29 @@
 //css
 
-//libary
+//library
+import { useNavigate } from 'react-router-dom';
 
 //component
 import ReserveForm from  './ReserveForm';
 
-function Reserve({form, onChange , occasions ,availableTimes}) {
+function Reserve({form, onChange , occasions ,availableTimes ,handleSubmit, onClick}) {
+
+    const nav = useNavigate();
 
     const handlerChange = (e) => {
         onChange(e)
     }
 
     const handlerSubmit = (e) => {
-        e.preventDefault()
+        // ~ use it to push handleSubmit up to parent component
+        handleSubmit(e);
+
+        e.preventDefault();
+        nav("/confirmed",{ replace: true })
+    }
+
+    const fetchData = (e)=> {
+        onClick(e)
     }
 
 
@@ -23,7 +34,8 @@ function Reserve({form, onChange , occasions ,availableTimes}) {
                     onChange={handlerChange}
                     occasions={occasions}
                     availableTimes={availableTimes}
-                    handlerSubmit={handlerSubmit}/>
+                    handlerSubmit={handlerSubmit}
+                    onClick={fetchData}/>
 
     </div>);
 

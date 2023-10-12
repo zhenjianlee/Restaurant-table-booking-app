@@ -1,0 +1,47 @@
+
+.header {
+    color:black;
+    font-size: 50px;
+    font-family: 'Markazi Text' ;
+    margin:auto;
+    text-align: justify;
+    padding-left: 20%;
+    padding-top:1%;
+    padding-bottom: 3%;
+    margin:1%;
+}
+
+.message{
+    display: grid;
+    grid-template-rows: repeat(12) ;
+    background-color:#FBDABB;
+    padding-top: 1%;
+    padding-bottom:1%;
+    padding-left: 5%;
+    padding-right:5%;
+    border: solid #333333;
+    border-radius: 15px;
+    width:30%;
+    margin:auto;
+}
+
+.message:hover{
+    background-color:#F4CE14;
+
+}
+
+
+h4{
+    color:black;
+    font-family: 'Karla' ;
+    font-size: 25px;
+    text-decoration: solid;
+}
+
+p{
+    color:black;
+    font-family: 'Karla' ;
+    font-size: 25px;
+    text-decoration: solid;
+    border-radius: 8px;
+}
